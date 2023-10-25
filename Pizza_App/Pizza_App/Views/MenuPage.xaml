@@ -25,14 +25,21 @@
             <Grid>
                 <Frame BackgroundColor="Transparent" Margin="0,50,0,10" HasShadow="True" CornerRadius="10">
                     <AbsoluteLayout>
-                        <Image Source="pizza1.jpg" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="350" HeightRequest="170" />
-                        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center" Spacing="0">
-                            <Label Text="Different" FontSize="30" HorizontalOptions="End" FontAttributes="Bold" TextColor="White" Padding="10,0,10,0" />
-                            <Label Text="Kind of Flavor" FontSize="30" HorizontalOptions="End"  FontAttributes="Bold" TextColor="White" Padding="10,0,10,0" />
+                        <Image Source="GardenVeggie.jpg" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="350" HeightRequest="200" />
+                        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Label Text="Different" FontFamily="Roman" Grid.Row="0" FontSize="30" HorizontalOptions="End" FontAttributes="Bold" TextColor="White" Padding="10,0,80,0" />
+                                <Label Text="Kind of Flavor" FontFamily="Roman" Grid.Row="1" FontSize="30" HorizontalOptions="End" FontAttributes="Bold" TextColor="White" Padding="10,0,15,0" />
+                            </Grid>
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
             </Grid>
+
 
         </StackLayout>
     </ContentPage.Content>

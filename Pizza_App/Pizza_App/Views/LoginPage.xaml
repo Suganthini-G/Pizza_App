@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pizza_App.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="logo.png" Margin="0,50,0,0" VerticalOptions="Start"  WidthRequest="50" HeightRequest="250"/>
+            <Label Text="Special &amp; Delicious Pizza" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+
+            <StackLayout Orientation="Vertical" Margin="0,50,0,0" HorizontalOptions="CenterAndExpand">
+                <Button Text="Log In"
+                        BackgroundColor="#800000"
+                        TextColor="White"
+                        CornerRadius="30"
+                        WidthRequest="200"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Center"
+                        TextTransform="None" 
+                        Clicked="MenuPage" />
+
+                <Button Text="Sign Up"
+                        BackgroundColor="#000000"
+                        TextColor="White"
+                        CornerRadius="30"
+                        Margin="0,0,0,10"
+                        WidthRequest="200"
+                        HorizontalOptions="Center" 
+                        TextTransform="None" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Image Source="FB.png" WidthRequest="30" HeightRequest="30" />
+                    <Image Source="google.png" WidthRequest="30" HeightRequest="30" />
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <Frame BackgroundColor="Black"
+                   CornerRadius="30"
+                   Margin="10,60,10,10"
+                   HasShadow="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image Source="pizza.png"
+                           Aspect="AspectFill"
+                           WidthRequest="150"
+                           HeightRequest="100"
+                           HorizontalOptions="End"
+                           VerticalOptions="Start"
+                           Grid.Column="1" />
+
+                    <StackLayout Grid.Column="0" Margin="10,10,10,10">
+                        <Label Text="20%" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Discount" FontSize="Title" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="From Our Store" FontSize="Subtitle" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

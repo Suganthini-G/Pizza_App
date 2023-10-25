@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                
+
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -23,11 +23,16 @@
             </Grid>
 
             <Grid>
-                <Frame BackgroundColor="Transparent" Margin="0,50,0,10" HasShadow="True">
-                    <Image Source="Pizza_sec.jpg" Aspect="AspectFill" WidthRequest="200" HeightRequest="170" />
+                <Frame BackgroundColor="Transparent" Margin="0,50,0,10" HasShadow="True" CornerRadius="10">
+                    <AbsoluteLayout>
+                        <Image Source="pizza1.jpg" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="350" HeightRequest="170" />
+                        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center" Spacing="0">
+                            <Label Text="Different" FontSize="30" HorizontalOptions="End" FontAttributes="Bold" TextColor="White" Padding="10,0,10,0" />
+                            <Label Text="Kind of Flavor" FontSize="30" HorizontalOptions="End"  FontAttributes="Bold" TextColor="White" Padding="10,0,10,0" />
+                        </StackLayout>
+                    </AbsoluteLayout>
                 </Frame>
             </Grid>
-
 
         </StackLayout>
     </ContentPage.Content>

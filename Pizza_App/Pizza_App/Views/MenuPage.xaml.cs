@@ -16,5 +16,11 @@ namespace Pizza_App.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void DescriptionPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DescriptionPage());
+        }
+
+    }
 }

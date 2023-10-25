@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pizza_App.Views.DescriptionPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Search_icon.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="0" Margin="20,30,10,10" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Text="Hello, User!" TextColor="White" FontSize="15" HorizontalTextAlignment="End" Margin="0,30,10,10" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="Person_icon.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" Margin="0,30,20,10" VerticalOptions="Center" HorizontalOptions="End"/>
+            </Grid>
+
+          
+            <Image Source="Pizza02.png" Aspect="AspectFill" HeightRequest="300" Margin="20"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Lorem Ipsum Dolor Sit Amet" TextColor="white" FontSize="30" FontAttributes="Bold" Margin="40,0,0,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
+                <Label Text="$ 150.00" HorizontalOptions="End" VerticalOptions="CenterAndExpand" FontSize="18" FontAttributes="Bold" TextColor="White" Margin="0,40,20,0" Grid.Column="1" Grid.Row="0" />
+            </Grid>
+
+            <Label Text="Lorem Ipsum dolor" TextColor="Gray" FontSize="15" Margin="40,0,0,0" HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Grid Margin="40,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="Star.png" Grid.Column="0" />
+                <Image Source="Star.png" Grid.Column="1" />
+                <Image Source="Star.png" Grid.Column="2" />
+                <Image Source="Star.png" Grid.Column="3" />
+                <Image Source="Star.png" Grid.Column="4" />
+            </Grid>
+            
+            <Label Text="Lorem Ipsum Dolor Sit Amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna." TextColor="white" FontSize="15" Margin="40,0,40,0" HorizontalOptions="Start" VerticalOptions="Start" />
+
+            <Grid Margin="40,40,20,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0">
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Button Text="-" Clicked="DecreaseButton_Clicked" BackgroundColor="Gray" TextColor="white" WidthRequest="20" HeightRequest="30" Padding="5,5" />
+                        <Label x:Name="countLabel" Padding="5,5,5,0" FontSize="15" Text="0" BackgroundColor="Gray" HeightRequest="30" WidthRequest="30" TextColor="white" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Button Text="+" Clicked="IncreaseButton_Clicked" BackgroundColor="Gray" TextColor="White" WidthRequest="20" HeightRequest="30" Padding="5,5" />
+                    </StackLayout>
+                </StackLayout>
+                <Button Grid.Column="1" 
+                        Grid.Row="0"
+                        Text="Add Cart" 
+                        BackgroundColor="#800000"
+                        TextColor="White"
+                        CornerRadius="10"
+                        WidthRequest="100"
+                        HeightRequest="35"
+                        HorizontalOptions="End"
+                        VerticalOptions="End"
+                        Padding="0"
+                        TextTransform="None" />
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

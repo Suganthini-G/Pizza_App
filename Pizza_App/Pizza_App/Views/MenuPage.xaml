@@ -41,20 +41,30 @@
                 </Frame>
             </Grid>
 
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Flavor Category" FontAttributes="Bold" FontSize="16" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-            </StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
-            <Grid>
+                    <BoxView Grid.Column="0" HeightRequest="1" Color="White" VerticalOptions="Center" Margin="15,0,0,0" />
+
+                    <Label Grid.Column="1" Text="Flavor Category" FontAttributes="Bold" TextColor="white" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <BoxView Grid.Column="2" HeightRequest="1" Color="white" VerticalOptions="Center" Margin="0,0,15,0" />
+                </Grid>
+
+                <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="0">
+                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="0" >
                     <AbsoluteLayout>
                         <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
@@ -105,49 +115,68 @@
                     <Label Text="Popular Now" FontAttributes="Bold" FontSize="16" TextColor="White" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Margin="20,0,0,0"/>
                 </StackLayout>
 
-                <!--<CarouselView ItemsSource="{Binding Cards}">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>-->
-                            <Frame BackgroundColor="#80000000" HasShadow="True" CornerRadius="10">
-                                <StackLayout Padding="0" Margin="0,0,180,0" VerticalOptions="EndAndExpand">
-                                    <Image Source="GardenVeggie.jpg" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="20,0,0,0" />
 
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="3*" />
-                                            <ColumnDefinition Width="1*" />
-                                        </Grid.ColumnDefinitions>
+                <CarouselView x:Name="TheCarousel"
+                              IndicatorView="indicatorview">
 
-                                        <Label Text="Lorem Ipsum dolor ele amet," TextColor="white" FontSize="15" FontAttributes="Bold" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
-                                        <Image Source="heart.png" HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0" Grid.Column="1" Grid.Row="0" />
-                                    </Grid>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
 
-                                    <Label Text="Lorem Ipsum dolor" TextColor="Gray" FontSize="15" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="Start" />
+                                    <Frame BackgroundColor="#80000000" CornerRadius="20" HasShadow="True" Grid.Column="0" Grid.Row="0">
+                                        <StackLayout>
+                                            <Image Source="{Binding ImageSource}" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="70" HeightRequest="100" Margin="20,0,20,0" />
 
-                                    <Grid Margin="20,0,0,10">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                        <Image Source="Star.png" Grid.Column="0" />
-                                        <Image Source="Star.png" Grid.Column="1" />
-                                        <Image Source="Star.png" Grid.Column="2" />
-                                        <Image Source="Star.png" Grid.Column="3" />
-                                        <Image Source="Star.png" Grid.Column="4" />
-                                    </Grid>
-                                </StackLayout>
-                            </Frame>
-                        <!--</DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>-->
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="3*" />
+                                                    <ColumnDefinition Width="1*" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label Text="Lorem Ipsum dolor ele amet," TextColor="white" FontSize="15" FontAttributes="Bold" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
+                                                <Image Source="heart.png" HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0" Grid.Column="1" Grid.Row="0" ScaleX="0.6" ScaleY="0.6"  />
+                                            </Grid>
+
+                                            <Label Text="Lorem Ipsum dolor" TextColor="Gray" FontSize="15" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="Start" />
+
+                                            <Grid Margin="20,0,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Image Source="Star.png" Grid.Column="0" />
+                                                <Image Source="Star.png" Grid.Column="1" />
+                                                <Image Source="Star.png" Grid.Column="2" />
+                                                <Image Source="Star.png" Grid.Column="3" />
+                                                <Image Source="Star.png" Grid.Column="4" />
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <IndicatorView
+                    x:Name="indicatorview"
+                    IndicatorColor="LightGray"
+                    IndicatorSize="10"
+                    SelectedIndicatorColor="Gray" />
+                 
 
             </StackLayout>
         </ScrollView>

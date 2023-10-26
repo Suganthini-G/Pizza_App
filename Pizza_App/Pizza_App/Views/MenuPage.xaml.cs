@@ -15,12 +15,35 @@ namespace Pizza_App.Views
 		public MenuPage ()
 		{
 			InitializeComponent ();
-		}
+            var cardData = new List<CardItem>
+            {
+                new CardItem
+                {
+                    ImageSource = "GardenVeggie.jpg"
+                },
+                new CardItem
+                {
+                    ImageSource = "pizza_sec.jpg"
+                },
+                new CardItem
+                {
+                    ImageSource = "GardenVeggie.jpg"
+                }
+
+            };
+
+            TheCarousel.ItemsSource = cardData;
+        }
 
         private async void DescriptionPage(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DescriptionPage());
         }
 
+    }
+    public class CardItem
+    {
+        public string ImageSource { get; set; }
+       
     }
 }

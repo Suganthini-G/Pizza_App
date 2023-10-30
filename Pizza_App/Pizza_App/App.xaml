@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pizza_App.App">
     <Application.Resources>
-    
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Pacifico">
+                <On Platform="Android" Value="Pacifico.ttf#Pacifico" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="AdelleBold">
+                <On Platform="Android" Value="AdelleBold.ttf#AdelleBold" />
+            </OnPlatform>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

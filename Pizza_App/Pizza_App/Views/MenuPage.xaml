@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pizza_App.Views.MenuPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="Black">
+             BackgroundColor="#272727">
+
     <ContentPage.Content>
-        <ScrollView>
         <StackLayout>
             <Grid>
 
@@ -17,168 +17,200 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                
-                <Image Source="Search_icon.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="0" Margin="20,30,10,10" VerticalOptions="Center" HorizontalOptions="Start"/>
-                <Label Text="Hello, User!" TextColor="White" FontSize="15" HorizontalTextAlignment="End" Margin="0,30,10,10" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
-                <Image Source="Person_icon.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" Margin="0,30,20,10" VerticalOptions="Center" HorizontalOptions="End"/>
+
+                <Image Source="Search_icon.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="0" Margin="20,20,10,10" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Text="Hello, User!" FontAttributes="Bold" FontFamily="{StaticResource AdelleBold}" TextColor="White" FontSize="15" HorizontalTextAlignment="End" Margin="0,20,10,10" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="Person_icon.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" Margin="0,20,20,10" VerticalOptions="Center" HorizontalOptions="End"/>
+            </Grid>
+
+            <Frame BackgroundColor="Transparent" Margin="0" HasShadow="True" CornerRadius="10">
+                <AbsoluteLayout>
+                    <Image Source="pizz.jpg" Aspect="AspectFill" WidthRequest="350" HeightRequest="170"/>
+
+                    <BoxView Color="Black" Opacity="0.5" AbsoluteLayout.LayoutBounds="1,0,1,1" AbsoluteLayout.LayoutFlags="All" />
+
+                    <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center" HorizontalOptions="End">
+                        <Label Text="Different" FontSize="30" FontFamily="{StaticResource AdelleBold}" FontAttributes="Bold" TextColor="White" Padding="10,0,80,0" />
+                        <Label Text="Kind of Flavor" FontSize="30" FontFamily="{StaticResource AdelleBold}" FontAttributes="Bold" TextColor="White" Padding="10,0,15,0" />
+                    </StackLayout>
+                </AbsoluteLayout>
+
+            </Frame>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView Grid.Column="0" HeightRequest="1" Color="White" VerticalOptions="Center" Margin="15,0,0,0" />
+
+                <Label Grid.Column="1" Text="Flavor Category" FontFamily="{StaticResource AdelleBold}" FontAttributes="Bold" TextColor="white" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <BoxView Grid.Column="2" HeightRequest="1" Color="white" VerticalOptions="Center" Margin="0,0,15,0" />
             </Grid>
 
             <Grid>
-                <Frame BackgroundColor="Transparent" Margin="0,0,0,0" HasShadow="True" CornerRadius="10">
-                    <AbsoluteLayout>
-                        <Image Source="GardenVeggie.jpg" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="350" HeightRequest="200" />
-                        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="Center">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Label Text="Different" FontFamily="Roman" Grid.Row="0" FontSize="30" HorizontalOptions="End" FontAttributes="Bold" TextColor="White" Padding="10,0,80,0" />
-                                <Label Text="Kind of Flavor" FontFamily="Roman" Grid.Row="1" FontSize="30" HorizontalOptions="End" FontAttributes="Bold" TextColor="White" Padding="10,0,15,0" />
-                            </Grid>
-                        </StackLayout>
-                    </AbsoluteLayout>
-                </Frame>
-            </Grid>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <BoxView Grid.Column="0" HeightRequest="1" Color="White" VerticalOptions="Center" Margin="15,0,0,0" />
-
-                    <Label Grid.Column="1" Text="Flavor Category" FontAttributes="Bold" TextColor="white" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
-
-                    <BoxView Grid.Column="2" HeightRequest="1" Color="white" VerticalOptions="Center" Margin="0,0,15,0" />
-                </Grid>
-
-                <Grid>
                 <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="0" >
+                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="0" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
                     <AbsoluteLayout>
                         <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" HorizontalOptions="Center" TextColor="white" Padding="75,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" HorizontalOptions="Center" TextColor="white" Padding="60,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="20" Text="Add Cart" FontSize="7" HorizontalOptions="End" Margin="0,0,10,0"  WidthRequest="60" HeightRequest="30" BackgroundColor="Maroon" TextColor="White" />
+                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
+                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
+                            <Button Clicked="DescriptionPage" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="1" Grid.Row="0">
+                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="1" Grid.Row="0" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
                     <AbsoluteLayout>
                         <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" HorizontalOptions="Center" TextColor="white" Padding="75,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" HorizontalOptions="Center" TextColor="white" Padding="60,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="20" Text="Add Cart" FontSize="7" HorizontalOptions="End" Margin="0,0,10,0"  WidthRequest="60" HeightRequest="30" BackgroundColor="Maroon" TextColor="White" />
+                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
+                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
+                            <Button Clicked="DescriptionPage" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="1">
+                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="1" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
                     <AbsoluteLayout>
                         <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" HorizontalOptions="Center" TextColor="white" Padding="75,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" HorizontalOptions="Center" TextColor="white" Padding="60,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="20" Text="Add Cart" FontSize="7" HorizontalOptions="End" Margin="0,0,10,0"  WidthRequest="60" HeightRequest="30" BackgroundColor="Maroon" TextColor="White" />
+                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
+                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
+                            <Button Clicked="DescriptionPage" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="1" Grid.Row="1">
+                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="1" Grid.Row="1" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
                     <AbsoluteLayout>
                         <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" HorizontalOptions="Center" TextColor="white" Padding="75,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" HorizontalOptions="Center" TextColor="white" Padding="60,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="20" Text="Add Cart" FontSize="7" HorizontalOptions="End" Margin="0,0,10,0"  WidthRequest="60" HeightRequest="30" BackgroundColor="Maroon" TextColor="White" />
+                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
+                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
+                            <Button Clicked="DescriptionPage" FontFamily="{StaticResource AdelleBold}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
 
             </Grid>
 
-
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Popular Now" FontAttributes="Bold" FontSize="16" TextColor="White" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Margin="20,0,0,0"/>
-                </StackLayout>
-
-
-                <CarouselView x:Name="TheCarousel"
-                              IndicatorView="indicatorview">
-
-                        <CarouselView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-
-                                    <Frame BackgroundColor="#80000000" CornerRadius="20" HasShadow="True" Grid.Column="0" Grid.Row="0">
-                                        <StackLayout>
-                                            <Image Source="{Binding ImageSource}" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" WidthRequest="70" HeightRequest="100" Margin="20,0,20,0" />
-
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="3*" />
-                                                    <ColumnDefinition Width="1*" />
-                                                </Grid.ColumnDefinitions>
-
-                                                <Label Text="Lorem Ipsum dolor ele amet," TextColor="white" FontSize="15" FontAttributes="Bold" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
-                                                <Image Source="heart.png" HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0" Grid.Column="1" Grid.Row="0" ScaleX="0.6" ScaleY="0.6"  />
-                                            </Grid>
-
-                                            <Label Text="Lorem Ipsum dolor" TextColor="Gray" FontSize="15" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="Start" />
-
-                                            <Grid Margin="20,0,0,0">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="*" />
-                                                </Grid.ColumnDefinitions>
-                                                <Image Source="Star.png" Grid.Column="0" />
-                                                <Image Source="Star.png" Grid.Column="1" />
-                                                <Image Source="Star.png" Grid.Column="2" />
-                                                <Image Source="Star.png" Grid.Column="3" />
-                                                <Image Source="Star.png" Grid.Column="4" />
-                                            </Grid>
-                                        </StackLayout>
-                                    </Frame>
-                                </Grid>
-                            </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
-
-                    <IndicatorView
-                    x:Name="indicatorview"
-                    IndicatorColor="LightGray"
-                    IndicatorSize="10"
-                    SelectedIndicatorColor="Gray" />
-                 
-
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Popular Now" FontAttributes="Bold" FontFamily="{StaticResource AdelleBold}" FontSize="16" TextColor="White" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Margin="25,15,0,10"/>
             </StackLayout>
-        </ScrollView>
+
+            <CarouselView x:Name="Carousel"
+                      IndicatorView="indicatorview"
+                      HeightRequest="210">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame BackgroundColor="#80000000" CornerRadius="10" HasShadow="True" Grid.Column="0" Grid.Row="0" Margin="20,0,5,0" Padding="0" VerticalOptions = "Start" HorizontalOptions = "Center">
+                                <StackLayout>
+                                    <Image Source="{Binding ImageSource1}" Grid.Column="0" Aspect="AspectFill" WidthRequest="150" HeightRequest="100" />
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="Lorem Ipsum dolor ele amet," FontFamily="{StaticResource AdelleBold}" TextColor="white" FontSize="14" FontAttributes="Bold" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
+                                        <Image Source="heart.png" HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0" Grid.Column="1" Grid.Row="0" ScaleX="0.6" ScaleY="0.6"  />
+                                    </Grid>
+
+                                    <Label Text="Lorem Ipsum dolor" FontFamily="{StaticResource AdelleBold}" TextColor="Gray" FontSize="10" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="Start" />
+
+                                    <Grid Margin="20,0,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="Star.png" Grid.Column="0" />
+                                        <Image Source="Star.png" Grid.Column="1" />
+                                        <Image Source="Star.png" Grid.Column="2" />
+                                        <Image Source="Star.png" Grid.Column="3" />
+                                        <Image Source="Star.png" Grid.Column="4" />
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="#80000000" CornerRadius="10" HasShadow="True" Grid.Column="1" Grid.Row="0" Margin="5,0,20,0" Padding="0" VerticalOptions = "Start" HorizontalOptions = "Center">
+                                <StackLayout>
+                                    <Image Source="{Binding ImageSource2}" Grid.Column="0" Aspect="AspectFill" WidthRequest="150" HeightRequest="100" />
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="Lorem Ipsum dolor ele amet," FontFamily="{StaticResource AdelleBold}" TextColor="white" FontSize="14" FontAttributes="Bold" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0" />
+                                        <Image Source="heart.png" HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0" Grid.Column="1" Grid.Row="0" ScaleX="0.6" ScaleY="0.6"  />
+                                    </Grid>
+
+                                    <Label Text="Lorem Ipsum dolor" FontFamily="{StaticResource AdelleBold}" TextColor="Gray" FontSize="10" Margin="20,0,0,0" HorizontalOptions="Start" VerticalOptions="Start" />
+
+                                    <Grid Margin="20,0,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="Star.png" Grid.Column="0" />
+                                        <Image Source="Star.png" Grid.Column="1" />
+                                        <Image Source="Star.png" Grid.Column="2" />
+                                        <Image Source="Star.png" Grid.Column="3" />
+                                        <Image Source="Star.png" Grid.Column="4" />
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView
+         x:Name="indicatorview"
+         IndicatorColor="Gray"
+         IndicatorSize="6"
+         SelectedIndicatorColor="LightGray" />
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,20 +19,18 @@ namespace Pizza_App.Views
             {
                 new CardItem
                 {
-                    ImageSource = "GardenVeggie.jpg"
+                    ImageSource1 = "GardenVeggie.jpg",
+                    ImageSource2 = "Supreme_pizza.jpg"
                 },
                 new CardItem
                 {
-                    ImageSource = "pizza_sec.jpg"
-                },
-                new CardItem
-                {
-                    ImageSource = "GardenVeggie.jpg"
+                    ImageSource1 = "spicy_veg.jpg",
+                    ImageSource2 = "prosciutto_pizza.jpg"
                 }
 
             };
 
-            TheCarousel.ItemsSource = cardData;
+            Carousel.ItemsSource = cardData;
         }
 
         private async void DescriptionPage(object sender, EventArgs e)
@@ -43,7 +41,7 @@ namespace Pizza_App.Views
     }
     public class CardItem
     {
-        public string ImageSource { get; set; }
-       
+        public string ImageSource1 { get; set; }
+        public string ImageSource2 { get; set; }
     }
 }

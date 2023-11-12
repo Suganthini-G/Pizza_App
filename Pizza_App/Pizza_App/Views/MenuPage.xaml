@@ -67,7 +67,7 @@
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
                             <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
                             <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
+                            <Button Command="{Binding DescriptionPageCommand}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
@@ -78,7 +78,7 @@
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
                             <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
                             <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
+                            <Button Command="{Binding DescriptionPageCommand}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
@@ -89,7 +89,7 @@
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
                             <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
                             <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Clicked="DescriptionPage" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
+                            <Button Command="{Binding DescriptionPageCommand}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
@@ -100,7 +100,7 @@
                         <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
                             <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
                             <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Clicked="DescriptionPage" FontFamily="{StaticResource AdelleBold}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
+                            <Button Command="{Binding DescriptionPageCommand}" FontFamily="{StaticResource AdelleBold}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
                         </StackLayout>
                     </AbsoluteLayout>
                 </Frame>
@@ -111,7 +111,7 @@
                 <Label Text="Popular Now" FontAttributes="Bold" FontFamily="{StaticResource AdelleBold}" FontSize="16" TextColor="White" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Margin="25,15,0,10"/>
             </StackLayout>
 
-            <CarouselView x:Name="Carousel"
+            <CarouselView ItemsSource="{Binding CardData}"
                       IndicatorView="indicatorview"
                       HeightRequest="210">
                 <CarouselView.ItemTemplate>

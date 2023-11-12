@@ -17,10 +17,7 @@ namespace Pizza_App.Views
             BindingContext = new LoginPageViewModel();
             
         }
-        private async void MenuPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MenuPage());
-        }
+       
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pizza_App.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,27 +13,12 @@ namespace Pizza_App.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DescriptionPage : ContentPage
 	{
-        private int count = 0;
         public DescriptionPage ()
 		{
 			InitializeComponent ();
-		}
-
-        private void IncreaseButton_Clicked(object sender, EventArgs e)
-        {
-            count++;
-            UpdateCountLabel();
+            BindingContext = new DescriptionPageViewModel();
         }
 
-        private void DecreaseButton_Clicked(object sender, EventArgs e)
-        {
-            count--;
-            UpdateCountLabel();
-        }
-
-        private void UpdateCountLabel()
-        {
-            countLabel.Text = count.ToString();
-        }
+        
     }
 }

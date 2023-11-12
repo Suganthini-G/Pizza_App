@@ -66,9 +66,9 @@
                 </Grid.ColumnDefinitions>
                 <StackLayout Grid.Column="0" Grid.Row="0">
                     <StackLayout Orientation="Horizontal" Spacing="0">
-                        <Button Text="-" Clicked="DecreaseButton_Clicked" FontFamily="{StaticResource AdelleBold}" BackgroundColor="#717171" TextColor="white" WidthRequest="20" HeightRequest="30" Padding="5,5" />
-                        <Label x:Name="countLabel" Padding="5" FontSize="15" FontFamily="{StaticResource AdelleBold}" Text="0" BackgroundColor="#717171" HeightRequest="30" WidthRequest="30" TextColor="white" HorizontalOptions="Center" VerticalOptions="Center" />
-                        <Button Text="+" Clicked="IncreaseButton_Clicked" FontFamily="{StaticResource AdelleBold}" BackgroundColor="#717171" TextColor="White" WidthRequest="20" HeightRequest="30" Padding="5,5" />
+                        <Button Text="-" Command="{Binding DecreaseCommand}" FontFamily="{StaticResource AdelleBold}" BackgroundColor="#717171" TextColor="white" WidthRequest="20" HeightRequest="30" Padding="5,5" />
+                        <Label Text="{Binding Count}" Padding="5" FontSize="15" FontFamily="{StaticResource AdelleBold}" BackgroundColor="#717171" HeightRequest="30" WidthRequest="30" TextColor="white" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Button Text="+" Command="{Binding IncreaseCommand}" FontFamily="{StaticResource AdelleBold}" BackgroundColor="#717171" TextColor="White" WidthRequest="20" HeightRequest="30" Padding="5,5" />
                     </StackLayout>
                 </StackLayout>
                 <Button Grid.Column="1" 

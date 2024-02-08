@@ -14,4 +14,3 @@ Design is based on the following Behance design: [Pizza Application](https://www
 <div style="display: flex; justify-content: center;">
   <img src="https://github.com/Suganthini-G/Pizza_App/assets/63195066/1af697a6-2b1e-489d-b372-dea2646a4cdc" alt="Screenshot 3" style="width: 45%;">
 </div>
-

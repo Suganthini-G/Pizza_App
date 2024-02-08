@@ -1,5 +1,8 @@
 # Pizza_App
 
+## Overview
+This project is a UI design implemented using Xamarin Forms. It aims to showcase a pizza application's UI inspired by a design from Behance.
+
 ## Design
 Design is based on the following Behance design: [Pizza Application](https://www.behance.net/gallery/181372129/Pizza-Application)
 

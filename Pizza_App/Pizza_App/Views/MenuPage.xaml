@@ -51,61 +51,30 @@
                 <BoxView Grid.Column="2" HeightRequest="1" Color="white" VerticalOptions="Center" Margin="0,0,15,0" />
             </Grid>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+            <CollectionView x:Name="PizzaCollectionview" ItemsSource="{Binding PizzaItems}" HeightRequest="180" Margin="20,0,20,0">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="0" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
-                    <AbsoluteLayout>
-                        <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
-                        <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Command="{Binding DescriptionPageCommand}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
-                        </StackLayout>
-                    </AbsoluteLayout>
-                </Frame>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="1" Grid.Row="0" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
-                    <AbsoluteLayout>
-                        <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
-                        <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Command="{Binding DescriptionPageCommand}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
-                        </StackLayout>
-                    </AbsoluteLayout>
-                </Frame>
+                        <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" VerticalOptions="Start" HorizontalOptions="Center" Padding="10">
+                            <AbsoluteLayout>
+                                <Image Source="{Binding ImageSource}" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
+                                <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding Name}" FontSize="10" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
+                                    <Label Text="{Binding Price}" FontSize="11" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
+                                    <Button Command="{Binding BindingContext.DescriptionPageCommand, Source={x:Reference Name=PizzaCollectionview}}" FontFamily="{StaticResource AdelleBold}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="0,0,15,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
+                                </StackLayout>
+                            </AbsoluteLayout>
+                        </Frame>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="0" Grid.Row="1" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
-                    <AbsoluteLayout>
-                        <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
-                        <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Command="{Binding DescriptionPageCommand}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
-                        </StackLayout>
-                    </AbsoluteLayout>
-                </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
-                <Frame BackgroundColor="Transparent" HasShadow="True" CornerRadius="10" Grid.Column="1" Grid.Row="1" VerticalOptions = "Start" HorizontalOptions="Center" Padding="5">
-                    <AbsoluteLayout>
-                        <Image Source="Pizza001.png" Aspect="AspectFill" WidthRequest="75" HeightRequest="75" Margin="0,0,5,0"/>
-                        <StackLayout AbsoluteLayout.LayoutBounds="1, 1, 1, 1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="CenterAndExpand">
-                            <Label Text="Margherita" FontSize="9" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="85,0,10,0" />
-                            <Label Text="$10.99" FontSize="8" FontFamily="{StaticResource AdelleBold}" HorizontalOptions="Center" TextColor="Gray" Padding="70,0,10,0" />
-                            <Button Command="{Binding DescriptionPageCommand}" FontFamily="{StaticResource AdelleBold}" CornerRadius="10" Text="Add Cart" FontSize="7" TextTransform="None" HorizontalOptions="End" Margin="30,0,5,0" Padding="5,0" WidthRequest="50" HeightRequest="15" BackgroundColor="#d65047" TextColor="White" />
-                        </StackLayout>
-                    </AbsoluteLayout>
-                </Frame>
 
-            </Grid>
 
             <StackLayout Orientation="Horizontal">
                 <Label Text="Popular Now" FontAttributes="Bold" FontFamily="{StaticResource AdelleBold}" FontSize="16" TextColor="White" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Margin="25,15,0,10"/>
@@ -200,7 +169,6 @@
                                 </StackLayout>
                             </Frame>
                         </Grid>
-
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>

@@ -1,6 +1,7 @@
 ﻿using Pizza_App.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -12,6 +13,7 @@ namespace Pizza_App.ViewModels
         public List<CardItem> CardData { get; }
 
         public ICommand DescriptionPageCommand { get; }
+
         public MenuPageViewModel()
         {
             CardData = new List<CardItem>
@@ -29,6 +31,32 @@ namespace Pizza_App.ViewModels
             };
 
             DescriptionPageCommand = new Command(DescriptionPage);
+            LoadData();
+        }
+
+        private ObservableCollection<PizzaItem> _pizzaItems;
+        public ObservableCollection<PizzaItem> PizzaItems
+        {
+            get { return _pizzaItems; }
+            set
+            {
+                if (_pizzaItems != value)
+                {
+                    _pizzaItems = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private void LoadData()
+        {
+            PizzaItems = new ObservableCollection<PizzaItem>
+            {
+                new PizzaItem { Name = "Margherita", Price = "$10.99", ImageSource = "Pizza001.png" },
+                new PizzaItem { Name = "Margherita", Price = "$10.99", ImageSource = "Pizza001.png" },
+                new PizzaItem { Name = "Margherita", Price = "$10.99", ImageSource = "Pizza001.png" },
+                new PizzaItem { Name = "Margherita", Price = "$10.99", ImageSource = "Pizza001.png" },
+            };
         }
 
         private async void DescriptionPage()
@@ -41,5 +69,11 @@ namespace Pizza_App.ViewModels
     {
         public string ImageSource1 { get; set; }
         public string ImageSource2 { get; set; }
+    }
+    public class PizzaItem
+    {
+        public string Name { get; set; }
+        public string Price { get; set; }
+        public string ImageSource { get; set; }
     }
 }
